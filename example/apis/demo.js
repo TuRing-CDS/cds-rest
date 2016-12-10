@@ -4,9 +4,9 @@
 module.exports = function (ns, Api) {
 
     let demoGet = new Api()
-        .param('username', Api.Types.TrimString)
+        .param('username', Api.Types.TrimString,'hello')
         .param('password', Api.Types.TrimString)
-        .required('username','password')
+        .required('username')
         .exec(function (params, callback) {
             callback(null, params);
         });
