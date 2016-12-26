@@ -1,0 +1,30 @@
+{
+  "name": "cds-rest",
+  "version": "0.1.0",
+  "description": "api,rest",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuRing-CDS/cds-rest.git"
+  },
+  "keywords": [
+    "api",
+    "rest"
+  ],
+  "author": "admin@cavacn.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TuRing-CDS/cds-rest/issues"
+  },
+  "homepage": "https://github.com/TuRing-CDS/cds-rest#readme",
+  "dependencies": {
+    "cds-namespace": "0.0.3",
+    "path-to-regexp": "1.7.0"
+  }
+}
