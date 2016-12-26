@@ -16,4 +16,5 @@ module.exports = function (ns, Api) {
         callback(null, params);
     }))
     ns('GET /demo/list', demoGet)
+    ns('logic.xxx',function(){return '1111'})
 }
