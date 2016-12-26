@@ -3,10 +3,9 @@
  */
 const chai = require('chai');
 
-const rest = require('./main');
-
 const expect = chai.expect;
 
+const rest = require('./main');
 describe(`CDS-Rest`, function () {
     it(`rest.isApi('GET /demo:hello') == true`, function () {
         expect(rest.isApi('GET /demo:hello')).equal(true);
