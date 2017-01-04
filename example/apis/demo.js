@@ -7,6 +7,13 @@ module.exports = function (ns, Api) {
         .param('username', Api.Types.TrimString, 'hello')
         .param('password', Api.Types.TrimString)
         .required('username')
+        .use(function (next) {
+            if (this.hello) {
+                this.hello2 = 'hello2' + Date.now();
+                return next()
+            }
+            next(new Error('xxxxx'));
+        })
         .exec(function (params, callback) {
             callback(null, params);
         });
@@ -16,5 +23,7 @@ module.exports = function (ns, Api) {
         callback(null, params);
     }))
     ns('GET /demo/list', demoGet)
-    ns('logic.xxx',function(){return '1111'})
+    ns('logic.xxx', function () {
+        return '1111'
+    })
 }
